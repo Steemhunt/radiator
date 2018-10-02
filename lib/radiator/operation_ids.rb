@@ -1,8 +1,8 @@
 module Radiator
   module OperationIds
     # These IDS are derrived from:
-    # https://github.com/steemit/steem/blob/b169ad4317653d46cb776bdc8ef4c25ff178743d/libraries/protocol/include/steemit/protocol/operations.hpp
-    
+    # https://github.com/steemit/steem/blob/807fb40ec137a987dc53cee6d8455c7b6c47aeed/libraries/protocol/include/steem/protocol/operations.hpp
+
     IDS = [
       :vote,
       :comment,
@@ -35,8 +35,8 @@ module Radiator
       :comment_options,
       :set_withdraw_vesting_route,
       :limit_order_create2,
-      :challenge_authority,
-      :prove_authority,
+      :claim_account,
+      :create_claimed_account,
       :request_account_recovery,
       :recover_account,
       :change_recovery_account,
@@ -55,6 +55,7 @@ module Radiator
       :claim_reward_balance,
       :delegate_vesting_shares,
       :account_create_with_delegation,
+      :witness_set_properties,
 
       # virtual operations below this point
       :fill_convert_request,
@@ -70,9 +71,10 @@ module Radiator
       :hardfork,
       :comment_payout_update,
       :return_vesting_delegation,
-      :comment_benefactor_reward
+      :comment_benefactor_reward,
+      :producer_reward
     ]
-    
+
     def id(op)
       IDS.find_index op
     end

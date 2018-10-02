@@ -57,6 +57,15 @@ module Radiator
         exchange_rate: Type::Price,
         expiration: Type::PointInTime
       },
+      claim_account: {
+        fee: Type::Amount
+      },
+      create_claimed_account: {
+        owner: Type::Permission,
+        active: Type::Permission,
+        posting: Type::Permission,
+        memo_key: Type::Permission
+      },
       request_account_recovery: {
         new_owner_Permission: Type::Permission
       },
